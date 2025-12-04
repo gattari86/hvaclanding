@@ -399,6 +399,105 @@ window.addEventListener('load', () => {
 });
 
 // ============================================
+// Enhanced Micro-Animations
+// Based on Designer's Arsenal best practices
+// ============================================
+
+class MicroAnimationController {
+    constructor() {
+        this.observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        this.init();
+    }
+
+    init() {
+        // Animate elements on scroll using Intersection Observer
+        if ('IntersectionObserver' in window) {
+            this.observeAnimatedElements();
+            this.setupSmoothScrolling();
+            this.setupFAQAnimations();
+            this.setupCardInteractions();
+        }
+    }
+
+    observeAnimatedElements() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add visible class to trigger animations
+                    entry.target.classList.add('visible');
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, this.observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section-header, .problem-card, .feature, .testimonial, .faq-item, .ai-feature').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    setupSmoothScrolling() {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    setupFAQAnimations() {
+        // FAQ toggle animations
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            if (question && answer) {
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+
+                    // Animate answer reveal
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.opacity = '1';
+                    } else {
+                        answer.style.maxHeight = '0';
+                        answer.style.opacity = '0';
+                    }
+                });
+            }
+        });
+    }
+
+    setupCardInteractions() {
+        // Add ripple effect on card clicks
+        const cards = document.querySelectorAll('.problem-card, .feature, .testimonial, .ai-feature');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+    }
+}
+
+// Initialize micro-animations
+const microAnimations = new MicroAnimationController();
+
+// ============================================
 // Performance Optimization
 // ============================================
 
