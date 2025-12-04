@@ -1,68 +1,102 @@
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Syne:wght@700&display=swap');
+      .step-label { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; }
+      .step-time { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; }
+    </style>
+  </defs>
+
   <!-- Background -->
-  <rect width="500" height="200" fill="#F9FAFB" rx="8"/>
+  <rect width="600" height="240" fill="#F9FAFB" rx="12" stroke="#E5E7EB" stroke-width="1"/>
 
   <!-- Step 1: Setup -->
   <g id="step-1">
-    <circle cx="50" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
-    <text x="50" y="110" font-size="20" text-anchor="middle" fill="#004E89">⚙</text>
-    <text x="50" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Setup</text>
-    <text x="50" y="158" font-size="9" text-anchor="middle" fill="#6B7280">30 mins</text>
+    <circle cx="75" cy="100" r="40" fill="#E8F4FF" stroke="#004E89" stroke-width="2.5"/>
+    <g transform="translate(75, 95)">
+      <!-- Settings icon SVG -->
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#004E89" stroke-width="1.5"/>
+      <circle cx="-6" cy="-6" r="2" fill="#004E89"/>
+      <circle cx="6" cy="-6" r="2" fill="#004E89"/>
+      <circle cx="6" cy="6" r="2" fill="#004E89"/>
+      <circle cx="-6" cy="6" r="2" fill="#004E89"/>
+    </g>
+    <text x="75" y="155" class="step-label" fill="#1F2937" text-anchor="middle">Setup</text>
+    <text x="75" y="170" class="step-time" fill="#6B7280" text-anchor="middle">30 mins</text>
   </g>
 
   <!-- Arrow 1 -->
-  <g id="arrow-1">
-    <line x1="85" y1="100" x2="125" y2="100" stroke="#FF6B35" stroke-width="2"/>
-    <path d="M125 100 L115 95 M125 100 L115 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  <g stroke="#FF6B35" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="115" y1="100" x2="155" y2="100"/>
+    <polygon points="160,100 150,95 150,105" fill="#FF6B35"/>
   </g>
 
   <!-- Step 2: Launch -->
   <g id="step-2">
-    <circle cx="150" cy="100" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
-    <text x="150" y="110" font-size="20" text-anchor="middle" fill="#FF6B35">🚀</text>
-    <text x="150" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Launch</text>
-    <text x="150" y="158" font-size="9" text-anchor="middle" fill="#6B7280">24 hours</text>
+    <circle cx="190" cy="100" r="40" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2.5"/>
+    <g transform="translate(190, 95)">
+      <!-- Rocket icon SVG -->
+      <path d="M0,-8 L3,-2 L-3,-2 Z" fill="#FF6B35"/>
+      <rect x="-2" y="0" width="4" height="6" fill="#FF6B35"/>
+      <circle cx="-4" cy="5" r="1.5" fill="#FF6B35"/>
+      <circle cx="4" cy="5" r="1.5" fill="#FF6B35"/>
+    </g>
+    <text x="190" y="155" class="step-label" fill="#1F2937" text-anchor="middle">Launch</text>
+    <text x="190" y="170" class="step-time" fill="#6B7280" text-anchor="middle">24 hours</text>
   </g>
 
   <!-- Arrow 2 -->
-  <g id="arrow-2">
-    <line x1="185" y1="100" x2="225" y2="100" stroke="#FF6B35" stroke-width="2"/>
-    <path d="M225 100 L215 95 M225 100 L215 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  <g stroke="#FF6B35" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="230" y1="100" x2="270" y2="100"/>
+    <polygon points="275,100 265,95 265,105" fill="#FF6B35"/>
   </g>
 
-  <!-- Step 3: Results -->
+  <!-- Step 3: Get Calls -->
   <g id="step-3">
-    <circle cx="250" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
-    <text x="250" y="110" font-size="20" text-anchor="middle" fill="#004E89">📞</text>
-    <text x="250" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Get Calls</text>
-    <text x="250" y="158" font-size="9" text-anchor="middle" fill="#6B7280">48-72 hours</text>
+    <circle cx="305" cy="100" r="40" fill="#E8F4FF" stroke="#004E89" stroke-width="2.5"/>
+    <g transform="translate(305, 95)">
+      <!-- Phone icon SVG -->
+      <rect x="-5" y="-7" width="10" height="14" rx="1.5" fill="none" stroke="#004E89" stroke-width="1.5"/>
+      <circle cx="0" cy="3" r="1" fill="#004E89"/>
+    </g>
+    <text x="305" y="155" class="step-label" fill="#1F2937" text-anchor="middle">Get Calls</text>
+    <text x="305" y="170" class="step-time" fill="#6B7280" text-anchor="middle">48-72 hrs</text>
   </g>
 
   <!-- Arrow 3 -->
-  <g id="arrow-3">
-    <line x1="285" y1="100" x2="325" y2="100" stroke="#FF6B35" stroke-width="2"/>
-    <path d="M325 100 L315 95 M325 100 L315 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  <g stroke="#FF6B35" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="345" y1="100" x2="385" y2="100"/>
+    <polygon points="390,100 380,95 380,105" fill="#FF6B35"/>
   </g>
 
   <!-- Step 4: Scale -->
   <g id="step-4">
-    <circle cx="350" cy="100" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
-    <text x="350" y="110" font-size="20" text-anchor="middle" fill="#FF6B35">📈</text>
-    <text x="350" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Scale</text>
-    <text x="350" y="158" font-size="9" text-anchor="middle" fill="#6B7280">Ongoing</text>
+    <circle cx="420" cy="100" r="40" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2.5"/>
+    <g transform="translate(420, 95)">
+      <!-- Chart/Growth icon SVG -->
+      <line x1="-5" y1="5" x2="-5" y2="-2" stroke="#FF6B35" stroke-width="1.5"/>
+      <line x1="0" y1="5" x2="0" y2="-5" stroke="#FF6B35" stroke-width="1.5"/>
+      <line x1="5" y1="5" x2="5" y2="-8" stroke="#FF6B35" stroke-width="1.5"/>
+      <polyline points="-5,-2 0,-5 5,-8" fill="none" stroke="#FF6B35" stroke-width="1.5"/>
+    </g>
+    <text x="420" y="155" class="step-label" fill="#1F2937" text-anchor="middle">Scale</text>
+    <text x="420" y="170" class="step-time" fill="#6B7280" text-anchor="middle">Ongoing</text>
   </g>
 
   <!-- Arrow 4 -->
-  <g id="arrow-4">
-    <line x1="385" y1="100" x2="425" y2="100" stroke="#FF6B35" stroke-width="2"/>
-    <path d="M425 100 L415 95 M425 100 L415 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  <g stroke="#FF6B35" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="460" y1="100" x2="500" y2="100"/>
+    <polygon points="505,100 495,95 495,105" fill="#FF6B35"/>
   </g>
 
   <!-- Step 5: Success -->
   <g id="step-5">
-    <circle cx="450" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
-    <text x="450" y="110" font-size="20" text-anchor="middle" fill="#004E89">✓</text>
-    <text x="450" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Success</text>
-    <text x="450" y="158" font-size="9" text-anchor="middle" fill="#6B7280">Results</text>
+    <circle cx="535" cy="100" r="40" fill="#E8F4FF" stroke="#004E89" stroke-width="2.5"/>
+    <g transform="translate(535, 100)">
+      <!-- Checkmark icon SVG -->
+      <path d="M-8,0 L-2,6 L8,-4" fill="none" stroke="#004E89" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="535" y="155" class="step-label" fill="#1F2937" text-anchor="middle">Success</text>
+    <text x="535" y="170" class="step-time" fill="#6B7280" text-anchor="middle">Results</text>
   </g>
 </svg>
