@@ -1,0 +1,68 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="200" fill="#F9FAFB" rx="8"/>
+
+  <!-- Step 1: Setup -->
+  <g id="step-1">
+    <circle cx="50" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
+    <text x="50" y="110" font-size="20" text-anchor="middle" fill="#004E89">⚙</text>
+    <text x="50" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Setup</text>
+    <text x="50" y="158" font-size="9" text-anchor="middle" fill="#6B7280">30 mins</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g id="arrow-1">
+    <line x1="85" y1="100" x2="125" y2="100" stroke="#FF6B35" stroke-width="2"/>
+    <path d="M125 100 L115 95 M125 100 L115 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Step 2: Launch -->
+  <g id="step-2">
+    <circle cx="150" cy="100" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
+    <text x="150" y="110" font-size="20" text-anchor="middle" fill="#FF6B35">🚀</text>
+    <text x="150" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Launch</text>
+    <text x="150" y="158" font-size="9" text-anchor="middle" fill="#6B7280">24 hours</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g id="arrow-2">
+    <line x1="185" y1="100" x2="225" y2="100" stroke="#FF6B35" stroke-width="2"/>
+    <path d="M225 100 L215 95 M225 100 L215 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Step 3: Results -->
+  <g id="step-3">
+    <circle cx="250" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
+    <text x="250" y="110" font-size="20" text-anchor="middle" fill="#004E89">📞</text>
+    <text x="250" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Get Calls</text>
+    <text x="250" y="158" font-size="9" text-anchor="middle" fill="#6B7280">48-72 hours</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g id="arrow-3">
+    <line x1="285" y1="100" x2="325" y2="100" stroke="#FF6B35" stroke-width="2"/>
+    <path d="M325 100 L315 95 M325 100 L315 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Step 4: Scale -->
+  <g id="step-4">
+    <circle cx="350" cy="100" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
+    <text x="350" y="110" font-size="20" text-anchor="middle" fill="#FF6B35">📈</text>
+    <text x="350" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Scale</text>
+    <text x="350" y="158" font-size="9" text-anchor="middle" fill="#6B7280">Ongoing</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <g id="arrow-4">
+    <line x1="385" y1="100" x2="425" y2="100" stroke="#FF6B35" stroke-width="2"/>
+    <path d="M425 100 L415 95 M425 100 L415 105" stroke="#FF6B35" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Step 5: Success -->
+  <g id="step-5">
+    <circle cx="450" cy="100" r="35" fill="#E8F4FF" stroke="#004E89" stroke-width="2"/>
+    <text x="450" y="110" font-size="20" text-anchor="middle" fill="#004E89">✓</text>
+    <text x="450" y="145" font-size="11" font-weight="600" text-anchor="middle" fill="#1F2937">Success</text>
+    <text x="450" y="158" font-size="9" text-anchor="middle" fill="#6B7280">Results</text>
+  </g>
+</svg>

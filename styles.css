@@ -214,7 +214,10 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    width: 100%;
 }
 
 .hero-badge {
@@ -264,11 +267,20 @@ a:hover {
     font-weight: 500;
 }
 
-.hero-cta {
+.hero-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: row;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
 }
 
 .hero-trust {
@@ -286,12 +298,23 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.hero-illustration {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    animation: slideInRight 0.8s ease-out;
 }
 
 .hero-graphic {
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, 1fr);
     gap: var(--spacing-lg);
+    width: 100%;
+    max-width: 400px;
 }
 
 .graphic-card {
@@ -299,10 +322,12 @@ a:hover {
     align-items: center;
     gap: var(--spacing-md);
     background: var(--color-white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
+    border: 1px solid #E5E7EB;
+    min-height: 100px;
 }
 
 .graphic-card:hover {
@@ -370,6 +395,47 @@ section:nth-child(even) {
     color: var(--color-dark-gray);
     max-width: 650px;
     margin: 0 auto;
+}
+
+/* ==========================================
+   VISUAL ASSETS
+   ========================================== */
+
+.process-visual,
+.growth-visual,
+.comparison-visual {
+    margin: var(--spacing-2xl) auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.process-visual img,
+.growth-visual img,
+.comparison-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.guarantee-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.technician-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technician-visual img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    animation: slideInLeft 0.8s ease-out;
 }
 
 /* ==========================================
@@ -1320,6 +1386,8 @@ section:nth-child(even) {
     .hero-cta {
         gap: var(--spacing-md);
         margin-bottom: var(--spacing-xl);
+        flex-direction: column;
+        width: 100%;
     }
 
     .btn {
@@ -1334,8 +1402,8 @@ section:nth-child(even) {
 
     .hero-graphic {
         width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
+        max-width: 100%;
+        grid-template-rows: repeat(3, auto);
         gap: var(--spacing-md);
     }
 
@@ -1365,6 +1433,20 @@ section:nth-child(even) {
 
     .features-grid {
         grid-template-columns: 1fr;
+    }
+
+    .guarantee-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .technician-visual {
+        order: -1;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .technician-visual img {
+        max-width: 300px;
     }
 
     .pricing-header h3 {
@@ -1632,6 +1714,20 @@ section:nth-child(even) {
 
     .pricing-footer {
         text-align: center;
+    }
+
+    .guarantee-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .technician-visual {
+        order: -1;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .technician-visual img {
+        max-width: 250px;
     }
 
     .guarantee-content {

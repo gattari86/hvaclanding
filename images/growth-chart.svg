@@ -1,0 +1,68 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFF8F6" rx="8"/>
+
+  <!-- Grid lines -->
+  <line x1="60" y1="250" x2="360" y2="250" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="60" y1="200" x2="360" y2="200" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="60" y1="150" x2="360" y2="150" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="60" y1="100" x2="360" y2="100" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Axes -->
+  <line x1="60" y1="50" x2="60" y2="250" stroke="#1F2937" stroke-width="2"/>
+  <line x1="60" y1="250" x2="360" y2="250" stroke="#1F2937" stroke-width="2"/>
+
+  <!-- Y-axis labels -->
+  <text x="50" y="260" font-size="11" fill="#6B7280">0</text>
+  <text x="50" y="207" font-size="11" fill="#6B7280">25</text>
+  <text x="50" y="157" font-size="11" fill="#6B7280">50</text>
+  <text x="50" y="107" font-size="11" fill="#6B7280">75</text>
+  <text x="50" y="57" font-size="11" fill="#6B7280">100</text>
+
+  <!-- X-axis labels -->
+  <text x="75" y="275" font-size="11" fill="#6B7280">Day 1</text>
+  <text x="155" y="275" font-size="11" fill="#6B7280">Day 3</text>
+  <text x="235" y="275" font-size="11" fill="#6B7280">Day 5</text>
+  <text x="310" y="275" font-size="11" fill="#6B7280">Day 7</text>
+
+  <!-- Bars (Growth chart) -->
+  <!-- Day 1 -->
+  <rect x="70" y="230" width="25" height="20" fill="#FF6B35" rx="2"/>
+  <text x="82.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">1</text>
+
+  <!-- Day 2 -->
+  <rect x="105" y="210" width="25" height="40" fill="#FF8355" rx="2"/>
+  <text x="117.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">2</text>
+
+  <!-- Day 3 -->
+  <rect x="140" y="180" width="25" height="70" fill="#FF6B35" rx="2"/>
+  <text x="152.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">3</text>
+
+  <!-- Day 4 -->
+  <rect x="175" y="130" width="25" height="120" fill="#FF8355" rx="2"/>
+  <text x="187.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">4</text>
+
+  <!-- Day 5 -->
+  <rect x="210" y="90" width="25" height="160" fill="#FF6B35" rx="2"/>
+  <text x="222.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">5</text>
+
+  <!-- Day 6 -->
+  <rect x="245" y="70" width="25" height="180" fill="#FF8355" rx="2"/>
+  <text x="257.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">6</text>
+
+  <!-- Day 7 -->
+  <rect x="280" y="50" width="25" height="200" fill="#FF6B35" rx="2"/>
+  <text x="292.5" y="258" font-size="9" font-weight="600" text-anchor="middle" fill="#1F2937">7</text>
+
+  <!-- Growth arrow -->
+  <g id="growth-arrow">
+    <path d="M330 150 L350 130" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M350 130 L345 138 M350 130 L342 125" stroke="#10B981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="200" y="30" font-size="14" font-weight="bold" text-anchor="middle" fill="#1F2937">5 Calls in 5 Days</text>
+
+  <!-- Legend -->
+  <text x="80" y="290" font-size="10" font-weight="600" fill="#FF6B35">● Emergency Calls</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F9FA"/>
+
+  <!-- AC Unit (Right side) -->
+  <g id="ac-unit">
+    <rect x="260" y="80" width="110" height="130" fill="#004E89" rx="8"/>
+    <rect x="270" y="90" width="90" height="50" fill="#1B7CB8" rx="4"/>
+    <!-- Vents -->
+    <circle cx="285" cy="110" r="4" fill="#E8F4FF"/>
+    <circle cx="305" cy="110" r="4" fill="#E8F4FF"/>
+    <circle cx="325" cy="110" r="4" fill="#E8F4FF"/>
+    <circle cx="285" cy="125" r="4" fill="#E8F4FF"/>
+    <circle cx="305" cy="125" r="4" fill="#E8F4FF"/>
+    <circle cx="325" cy="125" r="4" fill="#E8F4FF"/>
+    <!-- Display -->
+    <rect x="275" y="155" width="60" height="25" fill="#FFD700" rx="2"/>
+    <text x="305" y="172" font-size="14" font-weight="bold" text-anchor="middle" fill="#004E89">72°</text>
+  </g>
+
+  <!-- Thermostat (Left side) -->
+  <g id="thermostat">
+    <rect x="30" y="100" width="90" height="90" fill="#FF6B35" rx="8"/>
+    <circle cx="75" cy="145" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
+    <text x="75" y="155" font-size="28" font-weight="bold" text-anchor="middle" fill="#FF6B35">68°</text>
+    <!-- Buttons -->
+    <circle cx="60" cy="60" r="8" fill="#FFD700"/>
+    <circle cx="90" cy="60" r="8" fill="#FFD700"/>
+  </g>
+
+  <!-- Connection lines -->
+  <line x1="120" y1="145" x2="260" y2="145" stroke="#FF6B35" stroke-width="3" stroke-dasharray="5,5"/>
+
+  <!-- Smartphone (Center) -->
+  <g id="smartphone">
+    <rect x="165" y="160" width="70" height="120" fill="#1F2937" rx="6"/>
+    <rect x="170" y="170" width="60" height="100" fill="#E8F4FF" rx="3"/>
+    <!-- Status bar -->
+    <rect x="170" y="170" width="60" height="12" fill="#004E89" rx="1"/>
+    <text x="200" y="178" font-size="8" font-weight="bold" text-anchor="middle" fill="white">9:41</text>
+    <!-- Message -->
+    <text x="175" y="192" font-size="9" font-weight="600" fill="#004E89">HVAC Alert!</text>
+    <text x="175" y="205" font-size="7" fill="#374151">AC Repair</text>
+    <text x="175" y="215" font-size="7" fill="#374151">2 miles away</text>
+    <text x="175" y="225" font-size="7" fill="#10B981">✓ Book Now</text>
+  </g>
+
+  <!-- Checkmark (Success indicator) -->
+  <g id="checkmark">
+    <circle cx="370" cy="240" r="20" fill="#10B981"/>
+    <path d="M360 240 L368 248 L385 230" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text labels -->
+  <text x="75" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Your Home</text>
+  <text x="200" y="285" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Emergency Alert</text>
+  <text x="325" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Fast Response</text>
+</svg>

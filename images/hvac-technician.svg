@@ -1,0 +1,68 @@
+<svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#E8F4FF" rx="12"/>
+
+  <!-- Technician body -->
+  <g id="technician">
+    <!-- Head -->
+    <circle cx="150" cy="80" r="30" fill="#D4A574"/>
+    <!-- Eyes -->
+    <circle cx="140" cy="75" r="3" fill="#1F2937"/>
+    <circle cx="160" cy="75" r="3" fill="#1F2937"/>
+    <!-- Smile -->
+    <path d="M140 85 Q150 90 160 85" stroke="#1F2937" stroke-width="2" fill="none"/>
+
+    <!-- Body - HVAC Uniform -->
+    <rect x="120" y="115" width="60" height="80" fill="#FF6B35" rx="4"/>
+    <!-- Uniform details -->
+    <circle cx="135" cy="130" r="5" fill="#FFD700"/>
+    <circle cx="165" cy="130" r="5" fill="#FFD700"/>
+
+    <!-- Arms -->
+    <rect x="85" y="120" width="35" height="15" fill="#D4A574" rx="7"/>
+    <rect x="180" y="120" width="35" height="15" fill="#D4A574" rx="7"/>
+
+    <!-- Hand with wrench -->
+    <circle cx="85" cy="127" r="10" fill="#D4A574"/>
+    <!-- Wrench -->
+    <g transform="translate(75, 127)">
+      <rect x="0" y="-8" width="25" height="4" fill="#696969" rx="2"/>
+      <circle cx="25" cy="-4" r="5" fill="#696969"/>
+    </g>
+
+    <!-- Other hand with tools -->
+    <circle cx="215" cy="127" r="10" fill="#D4A574"/>
+    <!-- Tool in hand -->
+    <circle cx="225" cy="125" r="4" fill="#FFD700"/>
+
+    <!-- Legs -->
+    <rect x="130" y="200" width="12" height="50" fill="#1F2937" rx="6"/>
+    <rect x="158" y="200" width="12" height="50" fill="#1F2937" rx="6"/>
+
+    <!-- Shoes -->
+    <ellipse cx="136" cy="255" rx="12" ry="8" fill="#696969"/>
+    <ellipse cx="164" cy="255" rx="12" ry="8" fill="#696969"/>
+
+    <!-- Tool belt -->
+    <rect x="120" y="195" width="60" height="10" fill="#8B4513"/>
+    <circle cx="130" cy="200" r="4" fill="#FFD700"/>
+    <circle cx="150" cy="200" r="4" fill="#696969"/>
+    <circle cx="170" cy="200" r="4" fill="#696969"/>
+  </g>
+
+  <!-- Badge/Certification -->
+  <g id="badge">
+    <circle cx="250" cy="280" r="25" fill="#10B981"/>
+    <text x="250" y="288" font-size="16" font-weight="bold" text-anchor="middle" fill="white">24/7</text>
+    <text x="250" y="303" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Ready</text>
+  </g>
+
+  <!-- Stars (rating) -->
+  <g id="stars">
+    <text x="60" y="350" font-size="20">★★★★★</text>
+    <text x="180" y="350" font-size="12" fill="#374151" font-weight="600">Licensed & Certified</text>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="150" y="380" font-size="13" font-weight="600" text-anchor="middle" fill="#004E89">Professional HVAC Service</text>
+</svg>
