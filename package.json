@@ -1,0 +1,22 @@
+{
+  "name": "hvac-landing-page",
+  "version": "1.0.0",
+  "description": "High-converting HVAC lead generation landing page for Houston contractors. 5-call guarantee system.",
+  "keywords": [
+    "hvac",
+    "landing-page",
+    "lead-generation",
+    "houston",
+    "marketing",
+    "conversion"
+  ],
+  "author": "Poppy Marketing & Consulting",
+  "license": "MIT",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
