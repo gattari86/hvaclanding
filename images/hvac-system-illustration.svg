@@ -1,58 +1,120 @@
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="400" height="300" fill="#F8F9FA"/>
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define fonts and styles -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Syne:wght@700&display=swap');
+      .label-text { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
+      .display-text { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 700; }
+      .small-text { font-family: 'Inter', sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8F9FA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="acGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#004E89;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B7CB8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="500" height="400" fill="url(#bgGradient)" rx="16"/>
+
+  <!-- Decorative circles -->
+  <circle cx="480" cy="40" r="45" fill="#FF6B35" opacity="0.08"/>
+  <circle cx="30" cy="360" r="40" fill="#004E89" opacity="0.06"/>
+
+  <!-- AC Unit Thermostat (Left) -->
+  <g id="thermostat-unit">
+    <!-- Main body -->
+    <rect x="50" y="80" width="160" height="180" fill="#FF6B35" rx="14" stroke="#E85A24" stroke-width="2.5"/>
+
+    <!-- Screen bezel -->
+    <rect x="75" y="110" width="110" height="85" fill="#FFFFFF" rx="10" stroke="#FF6B35" stroke-width="1.5"/>
+
+    <!-- Temperature display -->
+    <text x="130" y="165" class="display-text" fill="#FF6B35" text-anchor="middle">68°</text>
+
+    <!-- Control buttons -->
+    <circle cx="80" cy="220" r="8" fill="#FFD700" stroke="#F5A623" stroke-width="1.5"/>
+    <circle cx="110" cy="220" r="8" fill="#FFD700" stroke="#F5A623" stroke-width="1.5"/>
+    <circle cx="140" cy="220" r="8" fill="#FFD700" stroke="#F5A623" stroke-width="1.5"/>
+    <circle cx="170" cy="220" r="8" fill="#FFD700" stroke="#F5A623" stroke-width="1.5"/>
+
+    <!-- Brand label -->
+    <text x="130" y="260" class="label-text" fill="#FFFFFF" text-anchor="middle">Smart Home</text>
+  </g>
 
   <!-- AC Unit (Right side) -->
   <g id="ac-unit">
-    <rect x="260" y="80" width="110" height="130" fill="#004E89" rx="8"/>
-    <rect x="270" y="90" width="90" height="50" fill="#1B7CB8" rx="4"/>
-    <!-- Vents -->
-    <circle cx="285" cy="110" r="4" fill="#E8F4FF"/>
-    <circle cx="305" cy="110" r="4" fill="#E8F4FF"/>
-    <circle cx="325" cy="110" r="4" fill="#E8F4FF"/>
-    <circle cx="285" cy="125" r="4" fill="#E8F4FF"/>
-    <circle cx="305" cy="125" r="4" fill="#E8F4FF"/>
-    <circle cx="325" cy="125" r="4" fill="#E8F4FF"/>
-    <!-- Display -->
-    <rect x="275" y="155" width="60" height="25" fill="#FFD700" rx="2"/>
-    <text x="305" y="172" font-size="14" font-weight="bold" text-anchor="middle" fill="#004E89">72°</text>
+    <!-- Main unit body -->
+    <rect x="310" y="100" width="150" height="160" fill="url(#acGradient)" rx="14" stroke="#00356F" stroke-width="2.5"/>
+
+    <!-- Top panel -->
+    <rect x="325" y="115" width="120" height="45" fill="#1B7CB8" rx="8"/>
+
+    <!-- Vents (visualization of air flow) -->
+    <circle cx="345" cy="135" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="370" cy="135" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="395" cy="135" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="420" cy="135" r="5" fill="#E8F4FF" opacity="0.8"/>
+
+    <circle cx="345" cy="155" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="370" cy="155" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="395" cy="155" r="5" fill="#E8F4FF" opacity="0.8"/>
+    <circle cx="420" cy="155" r="5" fill="#E8F4FF" opacity="0.8"/>
+
+    <!-- Temperature display -->
+    <rect x="330" y="175" width="110" height="50" fill="#FFD700" rx="8" stroke="#F5A623" stroke-width="1.5"/>
+    <text x="385" y="210" class="display-text" fill="#004E89" text-anchor="middle">72°</text>
+
+    <!-- Brand label -->
+    <text x="385" y="250" class="label-text" fill="#FFFFFF" text-anchor="middle">HVAC System</text>
   </g>
 
-  <!-- Thermostat (Left side) -->
-  <g id="thermostat">
-    <rect x="30" y="100" width="90" height="90" fill="#FF6B35" rx="8"/>
-    <circle cx="75" cy="145" r="35" fill="#FFF8F6" stroke="#FF6B35" stroke-width="2"/>
-    <text x="75" y="155" font-size="28" font-weight="bold" text-anchor="middle" fill="#FF6B35">68°</text>
-    <!-- Buttons -->
-    <circle cx="60" cy="60" r="8" fill="#FFD700"/>
-    <circle cx="90" cy="60" r="8" fill="#FFD700"/>
+  <!-- Connection Line (animated effect with stroke) -->
+  <g id="connection" stroke="#FF6B35" stroke-width="3" stroke-dasharray="8,6" opacity="0.7">
+    <line x1="210" y1="170" x2="310" y2="170"/>
+    <!-- Arrow -->
+    <polygon points="310,170 295,165 295,175" fill="#FF6B35"/>
   </g>
 
-  <!-- Connection lines -->
-  <line x1="120" y1="145" x2="260" y2="145" stroke="#FF6B35" stroke-width="3" stroke-dasharray="5,5"/>
-
-  <!-- Smartphone (Center) -->
+  <!-- Smartphone Alert (Center-Bottom) -->
   <g id="smartphone">
-    <rect x="165" y="160" width="70" height="120" fill="#1F2937" rx="6"/>
-    <rect x="170" y="170" width="60" height="100" fill="#E8F4FF" rx="3"/>
+    <!-- Phone body -->
+    <rect x="175" y="240" width="150" height="130" fill="#1F2937" rx="14" stroke="#111827" stroke-width="2"/>
+
+    <!-- Screen -->
+    <rect x="190" y="260" width="120" height="95" fill="#FFFFFF" rx="10"/>
+
+    <!-- Notch -->
+    <rect x="235" y="260" width="30" height="12" fill="#000" rx="6"/>
+
     <!-- Status bar -->
-    <rect x="170" y="170" width="60" height="12" fill="#004E89" rx="1"/>
-    <text x="200" y="178" font-size="8" font-weight="bold" text-anchor="middle" fill="white">9:41</text>
-    <!-- Message -->
-    <text x="175" y="192" font-size="9" font-weight="600" fill="#004E89">HVAC Alert!</text>
-    <text x="175" y="205" font-size="7" fill="#374151">AC Repair</text>
-    <text x="175" y="215" font-size="7" fill="#374151">2 miles away</text>
-    <text x="175" y="225" font-size="7" fill="#10B981">✓ Book Now</text>
+    <rect x="190" y="260" width="120" height="25" fill="#004E89" rx="10"/>
+    <text x="250" y="277" class="small-text" fill="#FFFFFF" text-anchor="middle" font-weight="700">9:41</text>
+
+    <!-- Alert content -->
+    <text x="250" y="300" class="label-text" fill="#FF6B35" text-anchor="middle" font-weight="700">HVAC ALERT</text>
+    <text x="250" y="320" class="small-text" fill="#374151" text-anchor="middle">AC Not Cooling</text>
+    <text x="250" y="335" class="small-text" fill="#6B7280" text-anchor="middle">2 miles away</text>
+    <text x="250" y="348" class="small-text" fill="#10B981" text-anchor="middle" font-weight="700">✓ Book Now</text>
   </g>
 
-  <!-- Checkmark (Success indicator) -->
-  <g id="checkmark">
-    <circle cx="370" cy="240" r="20" fill="#10B981"/>
-    <path d="M360 240 L368 248 L385 230" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Success Badge (Right) -->
+  <g id="success">
+    <circle cx="420" cy="290" r="45" fill="#10B981" opacity="0.15"/>
+    <circle cx="420" cy="290" r="38" fill="none" stroke="#10B981" stroke-width="2.5"/>
+    <path d="M405 290 L415 302 L438 272" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- Text labels -->
-  <text x="75" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Your Home</text>
-  <text x="200" y="285" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Emergency Alert</text>
-  <text x="325" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#374151">Fast Response</text>
+  <!-- Bottom labels -->
+  <text x="130" y="370" class="label-text" fill="#374151" text-anchor="middle">Your Control</text>
+  <text x="250" y="385" class="label-text" fill="#374151" text-anchor="middle">Live Alerts</text>
+  <text x="385" y="375" class="label-text" fill="#374151" text-anchor="middle">Results in</text>
+  <text x="385" y="390" class="label-text" fill="#FF6B35" text-anchor="middle" font-weight="700">72 Hours</text>
 </svg>
